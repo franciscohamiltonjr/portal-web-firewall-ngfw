@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CHAPTERS, Chapter } from '../data/bookData';
 import { TechTooltip } from './TechTooltip';
 import { StudyTipBanner } from './StudyTipBanner';
+import { PWAInstallButton } from './PWAInstallButton';
 import { 
   Shield, 
   Terminal, 
@@ -313,6 +314,8 @@ export const UnifiedHomeMap: React.FC<UnifiedHomeMapProps> = ({
                     <span>Glossário</span>
                   </button>
                 )}
+
+                <PWAInstallButton variant="header" className="px-4 py-3 rounded-lg text-xs" />
               </div>
 
               {/* Metadados Rápidos em Linha Única */}

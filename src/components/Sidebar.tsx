@@ -1,6 +1,7 @@
 import React from 'react';
 import { CHAPTERS, APPENDICES } from '../data/bookData';
 import { BookOpen, CheckCircle2, Circle, CheckSquare, Wrench, HelpCircle } from 'lucide-react';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface SidebarProps {
   currentChapterId: string;
@@ -177,6 +178,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
             );
           })}
         </div>
+      </div>
+
+      {/* PWA Install Button in Sidebar */}
+      <div className="pt-3 border-t border-slate-800/80">
+        <PWAInstallButton variant="sidebar" />
       </div>
     </aside>
   );

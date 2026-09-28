@@ -14,6 +14,7 @@ import { VendorsView } from './components/VendorsView';
 import { SearchModal } from './components/SearchModal';
 import { AuthorsModal } from './components/AuthorsModal';
 import { GlossaryModal } from './components/GlossaryModal';
+import { OfflineIndicator } from './components/OfflineIndicator';
 import { Shield, Network, FileText, Trophy, ArrowLeft, Users, Sparkles, BookOpen } from 'lucide-react';
 
 export default function App() {
@@ -48,6 +49,18 @@ export default function App() {
       // ignore
     }
   }, [completedChapters]);
+
+  // Global keyboard shortcut for search (⌘K or Ctrl+K)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        setIsSearchOpen(prev => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const toggleCompleteChapter = (id: string) => {
     setCompletedChapters(prev =>
@@ -372,6 +385,9 @@ export default function App() {
         onSelectChapter={handleSelectChapter}
         initialTermId={activeGlossaryTermId}
       />
+
+      {/* PWA OFFLINE CONNECTIVITY INDICATOR */}
+      <OfflineIndicator />
     </div>
   );
 }

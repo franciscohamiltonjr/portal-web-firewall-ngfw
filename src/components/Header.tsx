@@ -1,4 +1,5 @@
 import React from 'react';
+import { PWAInstallButton } from './PWAInstallButton';
 import { 
   Shield, 
   Home, 
@@ -139,8 +140,6 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Right Utilities & Actions */}
           <div className="flex items-center gap-2">
             {/* Checklists Shortcut */}
-
-            {/* Checklists Shortcut */}
             <button
               onClick={() => setActiveTab('checklists')}
               title="Apêndices A, B & C"
@@ -177,6 +176,9 @@ export const Header: React.FC<HeaderProps> = ({
                 <span className="hidden md:inline">Autores</span>
               </button>
             )}
+
+            {/* PWA Install Button */}
+            <PWAInstallButton variant="header" />
 
             {/* Global Search */}
             <button

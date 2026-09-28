@@ -1,0 +1,33 @@
+{
+  "id": "/",
+  "name": "Firewall Sem Ilusão - Guia NGFW",
+  "short_name": "Guia NGFW",
+  "description": "Guia Técnico Completo de Next-Generation Firewalls (NGFW). Da arquitetura de hardware ao tráfego criptografado TLS 1.3.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#090d16",
+  "background_color": "#090d16",
+  "categories": ["education", "books", "utilities"],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
