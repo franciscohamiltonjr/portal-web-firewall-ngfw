@@ -1,0 +1,9 @@
+{
+  "name": "Firewall Sem Ilusão — Guia Técnico Completo de NGFW",
+  "description": "Plataforma de aprendizado estruturado do livro Firewall Sem Ilusão de Mariana BS (2026). Todos os 15 capítulos, apêndices e checklists com fidelidade técnica absoluta.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
+

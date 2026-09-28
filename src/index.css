@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #0a0a0c;
+    color: #e0e0e0;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  code, pre, kbd, samp {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Cyber tech accents & glows */
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 30, 39, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 30, 39, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.cyber-glow-red {
+  box-shadow: 0 0 25px -4px rgba(255, 30, 39, 0.35);
+}
+
+.cyber-glow-red-lg {
+  box-shadow: 0 0 40px -2px rgba(255, 30, 39, 0.5);
+}
+
+.cyber-border-glow {
+  border-color: #ff1e27;
+  box-shadow: 0 0 15px -2px rgba(255, 30, 39, 0.3);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060709;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f242e;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff1e27;
+}
